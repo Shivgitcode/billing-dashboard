@@ -123,7 +123,7 @@ export default function Navbar({ children }) {
                 <List>
                     {['Home', 'Invoices'].map((text, index) => (
                         <ListItem key={text} disablePadding>
-                            <Link to={`/${text}`} className='w-full'>
+                            <Link to={`/${text === "Home" ? "" : text}`} className='w-full'>
                                 <ListItemButton>
                                     <ListItemIcon>
                                         {index % 2 === 0 ? <HomeIcon /> : <PaymentsIcon />}
@@ -140,20 +140,6 @@ export default function Navbar({ children }) {
             <Main open={open}>
                 <DrawerHeader />
                 {children}
-                {/* <Box className="flex flex-col items-start w-[400px] mx-auto gap-5">
-                    <Typography variant='h3'>Bill Info</Typography>
-                    <Box className="flex flex-col items-center gap-[50px] w-[500px] mx-auto" sx={{ border: "2px", borderRadius: "10px", padding: "" }}>
-                        <TextField id="outlined-basic" label="username" variant="outlined" className='w-full' />
-                        <TextField id="outlined-basic" label="product" variant="outlined" className='w-full' />
-                        <TextField id="outlined-basic" label="Quantity" variant="outlined" className='w-full' />
-                        <TextField id="outlined-basic" label="address" variant="outlined" className='w-full' />
-                        <TextField id="outlined-basic" label="price" variant="outlined" className='w-full' />
-
-                    </Box>
-
-                </Box> */}
-
-
             </Main>
         </Box>
     );
