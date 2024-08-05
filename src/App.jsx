@@ -10,19 +10,16 @@ import Navbar from "./components/Navbar"
 function App() {
 
     return (
-        <div className=" font-poppins">
-            <Routes>
+        <Routes>
 
-                <Route path="/Home" element={<Home></Home>}></Route>
-                <Route path="/invoices" element={<Invoices></Invoices>}></Route>
+            <Route path="/home" element={<Home></Home>}></Route>
+            <Route path="/invoices" element={<Invoices></Invoices>}></Route>
+
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route path="/signup" element={<Signup></Signup>}></Route>
+        </Routes>
 
 
-
-                <Route path="/login" element={<Login></Login>}></Route>
-                <Route path="/signup" element={<Signup></Signup>}></Route>
-            </Routes>
-
-        </div>
 
     )
 
